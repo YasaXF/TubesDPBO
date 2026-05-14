@@ -1,18 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package matkul;
+
+import java.util.ArrayList; 
+import java.util.List;
 
 /**
  *
- * @author Girls
+ * @author Mael (Modified for Group F)
  */
 public class Matkul {
-    private int matkulId;
-    private String namaMatkul;
-    private String deskripsi;
-    
+    private int matkulId; 
+    private String namaMatkul; 
+    private String deskripsi; 
+    private List<Material> daftarMaterial;
+
+  
+    public Matkul(int matkulId, String namaMatkul, String deskripsi) {
+        this.matkulId = matkulId;
+        this.namaMatkul = namaMatkul;
+        this.deskripsi = deskripsi;
+        this.daftarMaterial = new ArrayList<>(); 
+    }
+
+    public void tambahMaterial(Material material) {
+        this.daftarMaterial.add(material);
+    }
+
+    public List<Material> getDaftarMaterial() {
+        return daftarMaterial;
+    }
 
     public int getMatkulId() {
         return matkulId;
@@ -37,6 +52,4 @@ public class Matkul {
     public void setDeskripsi(String deskripsi) {
         this.deskripsi = deskripsi;
     }
-    
-    
 }
