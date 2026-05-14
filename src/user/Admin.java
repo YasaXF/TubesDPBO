@@ -9,8 +9,13 @@ package user;
  * @author Girls
  */
 public class Admin extends User{
+
+    public Admin(String username, String password) {
+        super(username, password);
+    }
+    
     public void manageCourses(){
-        
+        System.out.println("Admin sedang mengelola course: " + courseName);
     }
     public void assignTier(){
         
