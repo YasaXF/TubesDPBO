@@ -15,10 +15,12 @@ public class Admin extends User{
     public void assignTier(){
         System.out.println("Admin menentukan tier akses.");
     }
-    public void validateSubmission(){
-        System.out.println("Admin memvalidasi submission.");
+    public void validateSubmission() {
+        material.setStatus("Validated");
+        System.out.println("Material " + material.getTitle() + " berhasil divalidasi.");
     }
-    public void publishMaterial(){
-        System.out.println("Admin mempublish materi.");
+    public void publishMaterial() {
+        material.setStatus("Published");
+        System.out.println("Material " + material.getTitle() + " berhasil dipublish.");
     }
 }
