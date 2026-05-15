@@ -1,32 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package user;
 
-/**
- *
- * @author Girls
- */
 public class User {
     private int userId;
     private String username;
     private String password;
-    
-    public void login(){
+
+    public User(int userId, String username, String password) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
         
+    public void login(){
+         System.out.println(username + " berhasil login.");
     }
     
     public void searchMaterial(){
-        
+         System.out.println("Mencari materi dengan keyword: " + keyword);
     }
     
     public void viewResult(){
-        
+        System.out.println("Menampilkan hasil pencarian materi.");
     }
     
     public void accessMaterial(){
-        
+        System.out.println("Mengakses materi: " + materialTitle);
     }
 
     public int getUserId() {
