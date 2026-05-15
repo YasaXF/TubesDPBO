@@ -1,5 +1,7 @@
 package user;
 
+import matkul.Material;
+import user.Search;
 public class User {
     private int userId;
     private String username;
@@ -15,7 +17,7 @@ public class User {
     }
     
     public void searchMaterial(){
-         System.out.println("Mencari materi dengan keyword: " + keyword);
+         System.out.println("Mencari materi dengan keyword: " + getKeyword());
     }
     
     public void viewResult(){
@@ -23,7 +25,7 @@ public class User {
     }
     
     public void accessMaterial(){
-        System.out.println("Mengakses materi: " + materialTitle);
+        System.out.println("Mengakses materi: " + getMaterialId());
     }
 
     public int getUserId() {
