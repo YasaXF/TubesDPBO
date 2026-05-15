@@ -4,21 +4,38 @@
  */
 
 package user;
-public class Admin extends User{
-    
-    public Admin(String username, String password){
+public class Admin extends User {
+
+    // Constructor
+    public Admin(String username, String password) {
         super(username, password);
     }
-    public void manageCourses(){
-        System.out.println("Admin mengelola course.");
+
+    // Method untuk mengelola course
+    public void manageCourses(String courseName) {
+        System.out.println("Admin sedang mengelola course: " + courseName);
     }
-    public void assignTier(){
-        System.out.println("Admin menentukan tier akses.");
+
+    // Method upload materi
+    public void uploadMaterial(String materialTitle) {
+        System.out.println("Admin mengupload materi: " + materialTitle);
     }
-    public void validateSubmission(){
-        System.out.println("Admin memvalidasi submission.");
+
+    // Method menentukan level akses
+    public void assignTier(String username, String tier) {
+        System.out.println("Memberikan akses " + tier + " kepada user " + username);
     }
-    public void publishMaterial(){
-        System.out.println("Admin mempublish materi.");
+
+    // Method validasi submission dari senior
+    public boolean validateSubmission(String materialTitle) {
+        System.out.println("Memvalidasi submission materi: " + materialTitle);
+
+        // Simulasi validasi
+        return true;
+    }
+
+    // Method publish materi
+    public void publishMaterial(String materialTitle) {
+        System.out.println("Materi berhasil dipublish: " + materialTitle);
     }
 }
